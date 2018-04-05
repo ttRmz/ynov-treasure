@@ -1,0 +1,128 @@
+@import "utilities/variables";
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: $bg-color;
+    color: $dark;
+    font-family: 'Avenir';
+}
+section.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.card{
+    margin: 3% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.05);
+    .card-top, .card-bot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .card-top {
+        background-color: $bg-card;
+        figure{
+            margin: 30px 0 0 0;
+            width: 50%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .card-title{
+            font-size: 40px;
+            margin: 5px 0;
+            font-weight: lighter;
+        }
+        .diamond-title{
+            color: $diamond;
+        }
+        .gold-title{
+            color: $gold;
+        }
+        .silver-title{
+            color: $silver;
+        }
+        .card-subtitle{
+            font-size: 12px;
+        }
+        .card-price{
+            font-size: 14px;
+            b {
+                font-size: 30px;
+                big{
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+    .card-bot {
+        background-image: linear-gradient(to bottom, $bg-card, $bg-color);
+        border-top: 1px solid $bg-color;
+        ul{
+            font-weight: lighter;
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            color: $light;
+            li{
+                font-size: 16px;
+            }
+        }
+        .card-join{
+            width: 50%;
+            padding: 10px;  
+            font-size: 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50px;
+            color: #fff;
+            margin-bottom: 30px;
+            opacity: .8;
+            transition: opacity .3s linear, box-shadow .3s linear;
+        }
+        .join-gold{
+            background-color: $gold;
+            box-shadow: 0 0px 5px 0 $gold;
+        }
+        .join-gold:hover {
+            box-shadow: 0 0px 15px 0 $gold;
+        }
+        .join-silver{
+            background-color: $silver;
+            box-shadow: 0 0px 5px 0 $silver;
+        }
+        .join-silver:hover {
+            box-shadow: 0 0px 15px 0 $silver;
+        }
+        .join-diamond{
+            background-color: $diamond;
+            box-shadow: 0 0px 5px 0 $diamond;
+        }
+        .join-diamond:hover {
+            box-shadow: 0 0px 15px 0 $diamond;
+        }
+        .card-join:hover{
+            opacity: 1;
+        }
+    }
+}
+@media screen and (min-width: 480px){
+    .card{
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 800px){
+    .card{
+        width: 30%;
+    }
+}
