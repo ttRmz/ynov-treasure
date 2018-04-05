@@ -50,8 +50,8 @@ body{
 }
 
 .main-form{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,6 +145,7 @@ body{
 }
 
 .btn{
+    outline: none;
     border: none;
     padding: 10px 50px;  
     font-size: 15px;
