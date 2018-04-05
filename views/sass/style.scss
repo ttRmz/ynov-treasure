@@ -2,12 +2,38 @@
 
 body{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 0;
     background-color: $bg-color;
     color: $dark;
     font-family: 'Avenir';
+}
+
+.centered-column{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.overlay{
+    background-image: linear-gradient(to bottom, $bg-card, $bg-color);
+    position: fixed;
+    z-index: 999;
+    h2{
+        margin: 0.7em;
+        color: $silver;
+    }
+    a{
+        margin: 0;
+    }
+    span{
+        margin: 5px;
+    }
 }
 
 .navbar{
@@ -50,12 +76,6 @@ body{
 }
 
 .main-form{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     input{
         margin-bottom: 10px;
         outline: none;

@@ -1,11 +1,11 @@
 extend layout 
 
 block content
-    form.main-form(action="PUT")
+    form.main-form.centered-column(action="PUT")
         label(for="username") Username
         input(type="name" name="username")
         label(for="password") Password
         input(type="password" name="password")
-        button.btn.btn-diamond(type='submit') Login
+        button.btn.btn-diamond(type='submit') Connect
         span Don't have an account ?
             a(href="/register") Register here
