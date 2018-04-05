@@ -1,4 +1,5 @@
 @import "utilities/variables";
+
 body{
     height: 100vh;
     width: 100vw;
@@ -8,18 +9,53 @@ body{
     color: $dark;
     font-family: 'Avenir';
 }
-section.main{
+
+.navbar{
+    width: 100%;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.05);
+    background-image: linear-gradient(to bottom, $bg-card, $bg-color);
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .navbar-brand{
+        height: 60px;
+        margin: 15px;
+        img{
+            height: 100%;
+            width: auto;
+        }
+    }
+    .navbar-links{
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        li{
+            margin: 15px;
+        }
+    }
+}
+
+.main{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
 .card{
     margin: 3% 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90%;
+    max-width: 420px;
     box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.05);
     .card-top, .card-bot {
         display: flex;
@@ -41,15 +77,6 @@ section.main{
             font-size: 40px;
             margin: 5px 0;
             font-weight: lighter;
-        }
-        .diamond-title{
-            color: $diamond;
-        }
-        .gold-title{
-            color: $gold;
-        }
-        .silver-title{
-            color: $silver;
         }
         .card-subtitle{
             font-size: 12px;
@@ -77,44 +104,55 @@ section.main{
                 font-size: 16px;
             }
         }
-        .card-join{
-            width: 50%;
-            padding: 10px;  
-            font-size: 15px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 50px;
-            color: #fff;
-            margin-bottom: 30px;
-            opacity: .8;
-            transition: opacity .3s linear, box-shadow .3s linear;
-        }
-        .join-gold{
-            background-color: $gold;
-            box-shadow: 0 0px 5px 0 $gold;
-        }
-        .join-gold:hover {
-            box-shadow: 0 0px 15px 0 $gold;
-        }
-        .join-silver{
-            background-color: $silver;
-            box-shadow: 0 0px 5px 0 $silver;
-        }
-        .join-silver:hover {
-            box-shadow: 0 0px 15px 0 $silver;
-        }
-        .join-diamond{
-            background-color: $diamond;
-            box-shadow: 0 0px 5px 0 $diamond;
-        }
-        .join-diamond:hover {
-            box-shadow: 0 0px 15px 0 $diamond;
-        }
-        .card-join:hover{
-            opacity: 1;
-        }
     }
 }
+
+.btn{
+    padding: 10px 50px;  
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    color: #fff;
+    margin-bottom: 30px;
+    opacity: .8;
+    transition: opacity .3s linear, box-shadow .3s linear;
+}
+
+.btn:hover{
+    opacity: 1;
+}
+
+.card-diamond{
+    .card-title{
+        color: $diamond;
+    }
+}
+
+.card-silver{
+    .card-title{
+        color: $silver;
+    }
+}
+
+.btn-diamond{
+    background-color: $diamond;
+    box-shadow: 0 0px 5px 0 $diamond;
+}
+
+.btn-diamond:hover {
+    box-shadow: 0 0px 15px 0 $diamond;
+}
+
+.btn-silver{
+    background-color: $silver;
+    box-shadow: 0 0px 5px 0 $silver;
+}
+
+.btn-silver:hover {
+    box-shadow: 0 0px 15px 0 $silver;
+}
+
 @media screen and (min-width: 480px){
     .card{
         width: 60%;
@@ -122,7 +160,11 @@ section.main{
 }
 
 @media screen and (min-width: 800px){
+    .main{
+        width: 90%;
+        margin: auto;
+    }
     .card{
-        width: 30%;
+        width: 40%;
     }
 }

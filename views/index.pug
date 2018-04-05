@@ -2,11 +2,11 @@ extends layout
 
 block content
   section.main
-    .card
+    .card.card-silver
       .card-top
         figure
           img(src='images/silver.png', alt='')
-        h2.card-title.silver-title.text-uppercase
+        h2.card-title.text-uppercase
           | silver
         span.card-subtitle.text-uppercase
           | Solo
@@ -25,38 +25,12 @@ block content
             | Current players : 
             span.silver-players ? 
             | / 20
-        a.card-join.text-uppercase.join-silver(href='#') Join for 
-         span 1$
-    .card
-      .card-top
-        figure
-          img(src='images/gold.png', alt='')
-        h2.card-title.gold-title.text-uppercase
-          | gold
-        span.card-subtitle.text-uppercase
-          | Solo
-        span.card-price.text-uppercase
-          b
-            | $
-            big 39
-          |  to win
-      .card-bot
-        ul
-          li Dificulty : 
-            span.gold-dificulty Medium
-          li Timeout : 
-            span.gold-timeout 45min
-          li 
-            | Current players : 
-            span.gold-players ? 
-            | / 10
-        a.card-join.text-uppercase.join-gold(href='#') Join for 
-          span 5$
-    .card
+        a.btn.btn-silver.text-uppercase(href='#') Join
+    .card.card-diamond
       .card-top
         figure
           img(src='images/diamond.png', alt='')
-        h2.card-title.diamond-title.text-uppercase
+        h2.card-title.text-uppercase
           | diamond
         span.card-subtitle.text-uppercase
           | Solo
@@ -75,5 +49,4 @@ block content
             | Current players : 
             span.diamond-players ? 
             | / 15
-        a.card-join.text-uppercase.join-diamond(href='#') Join for 
-          span 9$
+        a.btn.btn-diamond.text-uppercase(href='#') Join
