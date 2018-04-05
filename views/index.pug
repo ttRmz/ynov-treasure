@@ -1,8 +1,11 @@
 extends layout
 
 block content
+
+  include nav
+  
   section.main
-    .card.card-silver
+    .card.card-silver(data-aos="fade-left")
       .card-top
         figure
           img(src='images/silver.png', alt='')
@@ -26,7 +29,7 @@ block content
             span.silver-players ? 
             | / 20
         a.btn.btn-silver.text-uppercase(href='#') Join
-    .card.card-diamond
+    .card.card-diamond(data-aos="fade-right")
       .card-top
         figure
           img(src='images/diamond.png', alt='')

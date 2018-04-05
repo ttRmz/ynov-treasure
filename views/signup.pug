@@ -1,0 +1,16 @@
+extend layout 
+
+block content
+    form.main-form(action="PUT")
+        label(for="username") Username
+        input(type="name" name="username")
+        label(for="email") Email
+        input(type="email" name="email")
+        label(for="password") Password
+        input(type="password" name="password")
+        label(for="verify-password") Verify password
+        input(type="password" name="verify-password")
+        button.btn.btn-diamond(type='submit') Register
+        span Already have an account ?
+            a(href="/login") Click here
+        
