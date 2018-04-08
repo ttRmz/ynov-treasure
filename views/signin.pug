@@ -2,10 +2,10 @@ extend layout
 
 block content
     form.main-form.centered-column(action="PUT")
-        label(for="username") Username
-        input(type="name" name="username")
-        label(for="password") Password
-        input(type="password" name="password")
-        button.btn.btn-diamond(type='submit') Connect
+        label.mb-sm(for="username") Username
+        input.mb-lg(type="name" name="username")
+        label.mb-sm(for="password") Password
+        input.mb-lg(type="password" name="password")
+        button.btn.btn-diamond.mb-md(type='submit') Connect
         span Don't have an account ?
-            a(href="/register") Register here
+            a.text-diamond(href="/register") Register here

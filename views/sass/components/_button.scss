@@ -1,0 +1,33 @@
+.btn{
+    border: none;
+    padding: 10px 50px;  
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    color: #fff;
+    opacity: .8;
+    transition: opacity .3s linear, box-shadow .3s linear;
+}
+
+.btn:hover{
+    opacity: 1;
+}
+
+.btn-diamond{
+    background-color: $diamond;
+    box-shadow: 0 0px 5px 0 $diamond;
+}
+
+.btn-diamond:hover {
+    box-shadow: 0 0px 15px 0 $diamond;
+}
+
+.btn-silver {
+    background-color: $silver;
+    box-shadow: 0 0px 5px 0 $silver;
+}
+
+.btn-silver:hover {
+    box-shadow: 0 0px 15px 0 $silver;
+}

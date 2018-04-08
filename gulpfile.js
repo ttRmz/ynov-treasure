@@ -35,5 +35,5 @@ gulp.task('style', function () {
 ); 
 
 gulp.task('style:watch', function () {
-  gulp.watch('./views/sass/*.scss', ['style']);
+  gulp.watch('./views/sass/*//*.scss', ['style']);
 });

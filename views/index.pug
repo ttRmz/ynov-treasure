@@ -7,13 +7,13 @@ block content
   include nav
 
   section.main
-    .card.card-silver(data-aos="fade-left")
+    .card.mt-lg
       .card-top
-        figure
+        figure.mt-lg
           img(src='images/silver.png', alt='')
-        h2.card-title.text-uppercase
+        h3.text-uppercase.text-silver
           | silver
-        span.card-subtitle.text-uppercase
+        span.text-silver.text-uppercase
           | Solo
         span.card-price.text-uppercase
           b
@@ -21,7 +21,7 @@ block content
             big 12
           |  to win
       .card-bot
-        ul
+        ul.text-silver
           li Dificulty : 
             span.silver-dificulty Easy
           li Timeout : 
@@ -30,14 +30,14 @@ block content
             | Current players : 
             span.silver-players ? 
             | / 20
-        a.btn.btn-silver.text-uppercase(href='#') Join
-    .card.card-diamond(data-aos="fade-right")
+        a.btn.btn-silver.text-uppercase.mb-lg(href='#') Join
+    .card.mt-lg
       .card-top
-        figure
+        figure.mt-lg
           img(src='images/diamond.png', alt='')
-        h2.card-title.text-uppercase
+        h3.text-uppercase.text-diamond
           | diamond
-        span.card-subtitle.text-uppercase
+        span.text-silver.text-uppercase
           | Solo
         span.card-price.text-uppercase
           b
@@ -45,7 +45,7 @@ block content
             big 99
           |  to win
       .card-bot
-        ul
+        ul.text-silver
           li Dificulty : 
             span.diamond-dificulty Hard
           li Timeout : 
@@ -54,4 +54,4 @@ block content
             | Current players : 
             span.diamond-players ? 
             | / 15
-        a.btn.btn-diamond.text-uppercase(href='#') Join
+        a.btn.btn-diamond.text-uppercase.mb-lg(href='#') Join

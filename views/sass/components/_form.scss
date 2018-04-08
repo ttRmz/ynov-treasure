@@ -1,0 +1,20 @@
+.main-form{
+    input{
+        border: solid 1px $silver;
+        padding: 10px;
+        font-size: 13px;
+        border-radius: 50px;
+        transition: border-color .3s linear, box-shadow .3s linear;
+        width: 50%;
+        max-width: 200px;
+    }
+    input:focus{
+        border-color: $purple;
+        box-shadow: 0 0px 15px 0 $purple;
+    }
+    span{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
