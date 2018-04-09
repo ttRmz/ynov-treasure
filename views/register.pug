@@ -1,7 +1,9 @@
 extend layout 
 
 block content
-    form.main-form.centered-column(action="PUT")
+    form.main-form.centered-column(method='POST' action='/register')
+        label.mb-sm(for="name") Name
+        input.mb-lg(type="name" name="name")
         label.mb-sm(for="username") Username
         input.mb-lg(type="name" name="username")
         label.mb-sm(for="email") Email
@@ -9,7 +11,7 @@ block content
         label.mb-sm(for="password") Password
         input.mb-lg(type="password" name="password")
         label.mb-sm(for="verify-password") Verify password
-        input.mb-lg(type="password" name="verify-password")
+        input.mb-lg(type="password" name="password2")
         button.btn.btn-diamond.mb-md(type='submit') Register
         span Already have an account ?
             a.text-diamond(href="/login") Click here

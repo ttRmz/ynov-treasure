@@ -1,7 +1,7 @@
 extend layout 
 
 block content
-    form.main-form.centered-column(action="PUT")
+    form.main-form.centered-column(method="POST" action="/login")
         label.mb-sm(for="username") Username
         input.mb-lg(type="name" name="username")
         label.mb-sm(for="password") Password
