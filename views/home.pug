@@ -1,0 +1,70 @@
+extends layout
+
+block content
+
+    .container.gradient(style='min-height:70vh')
+        .main-header.row.mt-lg.mb-lg.spaced
+            .item-full-sm.item-2-md.text-diamond
+                | Welcome to
+                br 
+                h3.text-silver Ynov Treasure
+                ul.navbar-links
+                    li.mb-lg
+                        a.btn.btn-diamond(href="/login") Sign in
+                    li.mt-lg
+                        a.btn.btn-silver(href="/register") Register
+            .item-full-sm.item-2-md
+                img.img-responsive(src="./images/treasures.png", alt="")
+    .container.bg-w.shadow
+        .row.centered
+            h6.text-center.text-silver.mt-lg.mb-md 
+                i Paris sous un nouvel angle.
+            p.mb-lg.text-center Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae sit nostrum iusto iste in nisi sapiente ullam ea at, est temporibus accusantium quasi magnam. Est veritatis cumque esse magnam eaque?
+    .parallax-window.bg-img-diamond(data-parallax="scroll" data-image-src="./images/homepage.jpg" style="height:35vh")
+    .container.gardient.team
+        .team-row
+            .card.mt-lg.shadow.mb-lg
+                .card-top
+                    figure.mt-lg
+                        img.rounded.shadow(src='images/cherif.jpeg', alt='')
+                    h3.text-uppercase.text-diamond
+                        | Cherif
+                    span.text-uppercase.mb-md
+                        | Lead developer
+                .card-bot.gradient
+                    ul.text-silver
+                        li.text-diamond.mb-md Strengh
+                        li nodeJS
+                        li AR JS
+                        li threeJS
+            .card.mt-lg.shadow.mb-lg
+                .card-top
+                    figure.mt-lg
+                        img.rounded.shadow(src='images/marwin.jpeg', alt='')
+                    h3.text-uppercase.text-silver
+                        | Marwin
+                    span.text-uppercase.mb-md
+                        | Business developer
+                .card-bot.gradient
+                    ul.text-silver
+                        li.text-diamond.mb-md Achievement
+                        li Business plan
+                        li Business model
+            .card.mt-lg.shadow.mb-lg
+                .card-top
+                    figure.mt-lg
+                        img.rounded.shadow(src='images/tristan.jpeg', alt='')
+                    h3.text-uppercase.text-silver
+                        | Tristan
+                    span.text-uppercase.mb-md
+                        | Fullstack developer 
+                .card-bot.gradient
+                    ul.text-silver
+                        li.text-diamond.mb-md Strengh
+                        li nodeJS
+                        li SASS
+                        li gulpJS
+                        li passportJS
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="./js/parallax.js")

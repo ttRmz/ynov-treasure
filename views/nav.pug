@@ -1,9 +1,15 @@
 block nav
-    nav.navbar
+    nav.navbar.shadow.gradient
         a.navbar-brand(href="")
             img(src="./images/brand.png", alt="y")
         ul.navbar-links
-            li 
-                a.btn.btn-silver.text-uppercase(href="/account") #{user.username}
-            li 
-                a.btn.btn-silver(href="/logout") Logout
+            if authenticated
+                li 
+                    a.btn.btn-diamond.text-uppercase(href="/account") #{user.username}
+                li 
+                    a.btn.btn-silver(href="/logout") Logout
+            else
+                li 
+                    a.btn.btn-diamond(href="/login") Sign in
+                li 
+                    a.btn.btn-silver(href="/register") Register
