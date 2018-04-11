@@ -1,0 +1,14 @@
+extend layout 
+
+block content
+    form.main-form.centered-column.bg-animated(method="POST" action="/login")
+        h4.text-silver.mb-lg.mt-md Sign in
+        label.mb-sm(for="username") Username
+        input.mb-lg(type="name" name="username" placeholder="Your username")
+        label.mb-sm(for="password") Password
+        input.mb-lg(type="password" name="password" placeholder="Your password")
+        button.btn.btn-diamond.mb-sm(type='submit') Sign in
+        a.text-silver.mb-md.mt-sm(href="/register") 
+            i Forgot paassword ?
+        span.mb-md Don't have an account ?
+            a.text-diamond(href="/register") Register

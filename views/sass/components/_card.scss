@@ -4,7 +4,6 @@
     align-items: center;
     width: 90%;
     max-width: 420px;
-    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.05);
     .card-top, .card-bot {
         display: flex;
         flex-direction: column;
@@ -35,7 +34,6 @@
         }
     }
     .card-bot {
-        background-image: linear-gradient(to bottom, $bg-card, $bg-color);
         border-top: 1px solid $bg-color;
         ul{
             font-weight: lighter;

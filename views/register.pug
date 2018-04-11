@@ -1,0 +1,19 @@
+extend layout 
+
+block content
+    form.main-form.centered-column.bg-animated(method='POST' action='/register')
+        h4.text-silver.mb-lg.mt-md Register
+        label.mb-sm(for="name") Name
+        input.mb-lg(type="name" name="name" placeholder="Your name")
+        label.mb-sm(for="username") Username
+        input.mb-lg(type="name" name="username" placeholder="Your username")
+        label.mb-sm(for="email") Email
+        input.mb-lg(type="email" name="email" placeholder="Your email adress")
+        label.mb-sm(for="password") Password
+        input.mb-lg(type="password" name="password" placeholder="Your password")
+        label.mb-sm(for="password2") Confirm password
+        input.mb-lg(type="password" name="password2" placeholder="Confirm your password")
+        button.btn.btn-diamond.mb-md(type='submit') Register
+        span.mb-md Already have an account ?
+            a.text-diamond(href="/login") Sign in
+        

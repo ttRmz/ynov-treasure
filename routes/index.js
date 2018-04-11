@@ -1,17 +1,30 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index');
+// Get Homepage
+router.get('/', ensureAuthenticated, function(req, res){
+	var isAuthenticated = req.isAuthenticated();
+	res.render('index', {authenticated: isAuthenticated});
 });
-/* GET sign in page. */
-router.get('/login', function(req, res, next) {
-  res.render('signin');
+router.get('/home', ensureAuthenticated, function(req, res){
+	var isAuthenticated = req.isAuthenticated();
+	res.render('home', {authenticated: isAuthenticated});
 });
-/* GET sign up page. */
-router.get('/register', function(req, res, next) {
-  res.render('signup');
+
+// Get Account page
+router.get('/account', ensureAuthenticated, function(req, res){
+	var isAuthenticated = req.isAuthenticated();
+	res.render('account', {authenticated: isAuthenticated});
 });
+
+function ensureAuthenticated(req, res, next){
+	if(req.isAuthenticated()){
+		return next();
+	} else {
+		//req.flash('error_msg','You are not logged in');
+		var isAuthenticated = req.isAuthenticated();
+		res.render('home', {authenticated: isAuthenticated});
+	}
+}
 
 module.exports = router;

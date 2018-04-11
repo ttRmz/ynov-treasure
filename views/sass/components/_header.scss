@@ -1,0 +1,13 @@
+.main-header{
+    text-align: center;
+    .navbar-links{
+        list-style: none;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width:480px){
+    .main-header{
+        text-align: left;
+    }
+}
