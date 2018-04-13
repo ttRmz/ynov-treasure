@@ -33,4 +33,10 @@ router.get('/stats', ensureAuthenticated, function(req, res){
 	res.render('stats', {authenticated: isAuthenticated});
 });
 
+// Get Game page
+router.get('/game', ensureAuthenticated, function(req, res){
+	var isAuthenticated = req.isAuthenticated();
+	res.render('game', {authenticated: isAuthenticated});
+});
+
 module.exports = router;

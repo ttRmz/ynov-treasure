@@ -97,11 +97,26 @@
     }
 }
 
-// STAT COL
+// STAT & GAME COL
 
-.main-stats{
+.main-col{
     display: flex;
     align-items: center;
     height: 100%;
+    text-align: center;
     flex-direction: column;
+    p{
+        width: 80%;
+    }
+}
+
+// LINKS ROW
+
+.row-links{
+    display: flex;
+    justify-content: center;
+    a, button{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 }

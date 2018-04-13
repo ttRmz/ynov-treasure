@@ -2,9 +2,7 @@ extends layout
 
 block content
 
-    include nav
-
-    section.main-stats
+    section.main-col
         h4.text-silver.mt-lg.mb-lg Your statistics  
         table.mb-lg
             tr.text-diamond
@@ -19,4 +17,6 @@ block content
                 td 53466433
                 td 09/04/2018
                 td.text-loose.text-uppercase loose
-        a.btn.btn-diamond(href="/") Play !
+        .row-links
+            a.btn.btn-silver(href="/account") Back
+            a.btn.btn-diamond(href="/") Play !
