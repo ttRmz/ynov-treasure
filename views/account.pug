@@ -3,15 +3,16 @@ extend layout
 block content
     section.centered-column
         h4.text-silver.mt-md Welcome #{user.name} !
-        a.mb-lg.text-diamond(href="/") Back to homepage
+        a.mb-md.text-diamond(href="/") Back to homepage
+        a.btn.btn-diamond.mb-lg(href="/stats") Views stats        
         form.main-form.centered-item(method='POST')
             input.mb-md(type="name" name="username" placeholder= user.username)
-            button.btn.btn-diamond.mb-lg(type='submit') Change username 
+            button.btn.btn-silver.mb-lg(type='submit') Change username 
         form.main-form.centered-item(method='POST')
             input.mb-md(type="email" name="email" placeholder= user.email)
             input.mb-md(type="password" name="password" placeholder="Password")
-            button.btn.btn-diamond.mb-lg(type='submit') Change email        
+            button.btn.btn-silver.mb-lg(type='submit') Change email        
         form.main-form.centered-item.mb-md(method='POST') 
             input.mb-md(type="password" name="password" placeholder="Current password")
             input.mb-md(type="password" name="password2" placeholder="New password")
-            button.btn.btn-diamond(type='submit') Change Password
+            button.btn.btn-silver(type='submit') Change Password

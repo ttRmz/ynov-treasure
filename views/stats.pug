@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+    include nav
+
+    section.main-stats
+        h4.text-silver.mt-lg.mb-lg Your statistics  
+        table.mb-lg
+            tr.text-diamond
+                th Game id
+                th Date
+                th Result
+            tr
+                td 42342452
+                td 23/05/2019
+                td.text-win.text-uppercase win
+            tr
+                td 53466433
+                td 09/04/2018
+                td.text-loose.text-uppercase loose
+        a.btn.btn-diamond(href="/") Play !

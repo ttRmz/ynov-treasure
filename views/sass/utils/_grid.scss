@@ -75,3 +75,33 @@
         width: 70%;
     }
 }
+
+// TEAM ROW
+
+.team-row{
+    width: 90%;
+    justify-content: center;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    .card{
+        width: 70%;
+    }
+}
+@media screen and (min-width: 768px){
+    .team-row{
+        justify-content: space-between;
+        .card{
+            width: 30%;
+        }
+    }
+}
+
+// STAT COL
+
+.main-stats{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
