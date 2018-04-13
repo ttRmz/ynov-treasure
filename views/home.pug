@@ -19,52 +19,29 @@ block content
         .row.centered
             h6.text-center.text-silver.mt-lg.mb-md 
                 i Paris sous un nouvel angle.
-            p.mb-lg.text-center Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae sit nostrum iusto iste in nisi sapiente ullam ea at, est temporibus accusantium quasi magnam. Est veritatis cumque esse magnam eaque?
+            p.mb-md.text-center Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae sit nostrum iusto iste in nisi sapiente ullam ea at, est temporibus accusantium quasi magnam. Est veritatis cumque esse magnam eaque?
+            a.btn.btn-silver.mb-lg(href="/about") More about us
     .parallax-window.bg-img-diamond(data-parallax="scroll" data-image-src="./images/homepage.jpg" style="height:35vh")
-    .container.gardient.team
-        .team-row
-            .card.mt-lg.shadow.mb-lg
-                .card-top
-                    figure.mt-lg
-                        img.rounded.shadow(src='images/cherif.jpeg', alt='')
-                    h3.text-uppercase.text-diamond
-                        | Cherif
-                    span.text-uppercase.mb-md
-                        | Lead developer
-                .card-bot.gradient
-                    ul.text-silver
-                        li.text-diamond.mb-md Strengths
-                        li nodeJS
-                        li AR JS
-                        li threeJS
-            .card.mt-lg.shadow.mb-lg
-                .card-top
-                    figure.mt-lg
-                        img.rounded.shadow(src='images/marwin.jpeg', alt='')
-                    h3.text-uppercase.text-silver
-                        | Marwin
-                    span.text-uppercase.mb-md
-                        | Business developer
-                .card-bot.gradient
-                    ul.text-silver
-                        li.text-diamond.mb-md Achievements
-                        li Business plan
-                        li Business model
-            .card.mt-lg.shadow.mb-lg
-                .card-top
-                    figure.mt-lg
-                        img.rounded.shadow(src='images/tristan.jpeg', alt='')
-                    h3.text-uppercase.text-silver
-                        | Tristan
-                    span.text-uppercase.mb-md
-                        | Fullstack developer 
-                .card-bot.gradient
-                    ul.text-silver
-                        li.text-diamond.mb-md Strengths
-                        li nodeJS
-                        li SASS
-                        li gulpJS
-                        li passportJS
-
+    .container.bg-w.shadow.gradient
+        .row.around
+            .main-feature
+                figure.feature-figure.mt-lg
+                    img.img-responsive.feature-img(src="./images/user.png", alt="user")
+                hr.little-hr
+                p.figure-desc.mt-lg.mb-lg Create your user profil or sign in. ( 
+                    a.text-diamond(href="/login") sign in 
+                    | or 
+                    a.text-diamond(href="/register") register 
+                    | )
+            .main-feature
+                figure.feature-figure.mt-lg
+                    img.img-responsive.feature-img(src="./images/compass.png", alt="user")
+                hr.little-hr
+                p.figure-desc.mt-lg.mb-lg Join a party and discover amazing places.
+            .main-feature
+                figure.feature-figure.mt-lg
+                    img.img-responsive.feature-img(src="./images/heart.png", alt="user")
+                hr.little-hr
+                p.figure-desc.mt-lg.mb-lg Enjoy your victory. It is free forever !
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
     script(src="./js/parallax.js")
