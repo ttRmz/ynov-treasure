@@ -17,9 +17,10 @@ init($('#marker').val());
 
 
 socket.on('TrueSucess', ()=> {
+    clearInterval(interval);
     setTimeout(()=> { 
         location.href="/game";
-    }, 5000);
+    }, 3500);
 })
 
 window.addEventListener('touchstart', function() {
@@ -146,6 +147,6 @@ function render(){
     })
 }
 
-setInterval(function(){ if(scene.visible){
+var interval = setInterval(function(){ if(scene.visible){
     yes();
 } }, 1000);
