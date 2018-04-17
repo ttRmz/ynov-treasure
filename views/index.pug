@@ -8,18 +8,18 @@ block content
     .card.mt-lg.shadow
       .card-top
         figure.mt-lg
-          img(src='images/silver.png', alt='')
+          img(src='assets/images/silver.png', alt='')
         h3.text-uppercase.text-silver!= chasse.name
         span.text-silver.text-uppercase!= chasse.theme
         span.card-price.text-uppercase
-          b
+          b.text-cap
             != chasse.winning
           |  to win
       .card-bot.gradient
         ul.text-silver
           li Type : 
             span.silver-dificulty!= chasse.type
-          li Date started : 
+          li Started : 
             span.silver-timeout!= chasse.startdate
           li 
             | Current players : 
@@ -35,14 +35,14 @@ block content
     .card.mt-lg.shadow
       .card-top
         figure.mt-lg
-          img(src='images/diamond.png', alt='')
+          img(src='assets/images/diamond.png', alt='')
         h3.text-uppercase.text-diamond
-          | LA CHASSE diamond
+          | sponsored
         span.text-silver.text-uppercase
-          | L'UNE DES MEILLEURS CHASSE DE DÉCOUVERTE
+          | the best hunt to discover
         span.card-price.text-uppercase
-          b
-            |ICON 
+          b.text-cap
+            | Goodies
           |  to win
       .card-bot.gradient
         ul.text-silver

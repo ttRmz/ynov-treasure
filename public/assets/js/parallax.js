@@ -411,4 +411,4 @@
 
 }(jQuery, window, document));
 
-$('.parallax-window').parallax({imageSrc: '../images/homepage.jpg'});
+$('.parallax-window').parallax({imageSrc: './assets/images/homepage.jpg'});

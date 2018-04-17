@@ -30,7 +30,7 @@ gulp.task('style', function () {
       // Minify the file
       .pipe(csso())
       // Output
-      .pipe(gulp.dest('./public/css'))
+      .pipe(gulp.dest('./public/assets/css'))
     }
 ); 
 
