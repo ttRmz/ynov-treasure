@@ -89,87 +89,12 @@ function showText(text){
     });
 }
 
-function update() {
-		
-    // add some rotation to the system
-    particleSystem.rotation.y += 0.01;
-    
-    var pCount = particleCount;
-    while(pCount--) {
-        // get the particle
-        var particle = particles.vertices[pCount];
-        
-        // check if we need to reset
-        if(particle.position.y < -200) {
-            particle.position.y = 200;
-            particle.velocity.y = 0;
-        }
-        
-        // update the velocity
-        particle.velocity.y -= Math.random() * .1;
-        
-        // and the position
-        particle.position.addSelf(
-            particle.velocity);
-    }
-    
-    // flag to the particle system that we've
-    // changed its vertices. This is the
-    // dirty little secret.
-    particleSystem.geometry.__dirtyVertices = true;
-    
-    // set up the next call
-    requestAnimFrame(update);
-}
-requestAnimFrame(update);
 function init(mn){
     container = document.getElementById('camera');
 
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     scene = new THREE.Scene();
     camera = new THREE.Camera();
-    var particleCount = 1800,
-	    particles = new THREE.Geometry(),
-		pMaterial = new THREE.ParticleBasicMaterial({
-			color: 0xFFFFFF,
-			size: 20,
-			map: THREE.ImageUtils.loadTexture(
-				"images/particle.png"
-			),
-			blending: THREE.AdditiveBlending,
-			transparent: true
-		});
-	
-	// now create the individual particles
-	for(var p = 0; p < particleCount; p++) {
-	
-		// create a particle with random
-		// position values, -250 -> 250
-		var pX = Math.random() * 500 - 250,
-			pY = Math.random() * 500 - 250,
-			pZ = Math.random() * 500 - 250,
-		    particle = new THREE.Vertex(
-				new THREE.Vector3(pX, pY, pZ)
-			);
-		// create a velocity vector
-		particle.velocity = new THREE.Vector3(
-			0,				// x
-			-Math.random(),	// y
-			0);				// z
-
-		// add it to the geometry
-		particles.vertices.push(particle);
-	}
-	
-	// create the particle system
-	var particleSystem = new THREE.ParticleSystem(
-		particles,
-		pMaterial);
-	
-	particleSystem.sortParticles = true;
-	
-	// add it to the scene
-	scene.addChild(particleSystem);
 
     renderer.setClearColor(0x000000, 0);
     renderer.setSize(window.innerWidth, window.innerHeight);
