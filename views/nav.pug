@@ -5,7 +5,7 @@ block nav
         ul.navbar-links
             if authenticated
                 li 
-                    a.btn.btn-diamond.text-uppercase(href="/account") #{user.username}
+                    a.btn.btn-diamond.text-uppercase#pseudo(href="/account") #{user.username}
                 li 
                     a.btn.btn-silver(href="/logout") Logout
             else

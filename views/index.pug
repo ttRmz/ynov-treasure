@@ -9,47 +9,62 @@ block content
       .card-top
         figure.mt-lg
           img(src='images/silver.png', alt='')
-        h3.text-uppercase.text-silver
-          | silver
-        span.text-silver.text-uppercase
-          | Solo
+        h3.text-uppercase.text-silver!= chasse.name
+        span.text-silver.text-uppercase!= chasse.theme
         span.card-price.text-uppercase
           b
-            | $
-            big 12
+            != chasse.winning
           |  to win
       .card-bot.gradient
         ul.text-silver
-          li Dificulty : 
-            span.silver-dificulty Easy
-          li Timeout : 
-            span.silver-timeout 60min
+          li Type : 
+            span.silver-dificulty!= chasse.type
+          li Date started : 
+            span.silver-timeout!= chasse.startdate
           li 
             | Current players : 
-            span.silver-players ? 
+            span.silver-players!= chasse.countplayer
             | / 20
-        a.btn.btn-silver.text-uppercase.mb-lg(href='/game') Join
+      if joined
+        if complete 
+          a.btn.btn-silver.text-uppercase.mb-lg(href='/') Finished
+        else
+          a.btn.btn-silver.text-uppercase.mb-lg(href='/game') Resolve
+      else
+        button.btn.btn-silver.text-uppercase.mb-lg.joinsilver Join
     .card.mt-lg.shadow
       .card-top
         figure.mt-lg
           img(src='images/diamond.png', alt='')
         h3.text-uppercase.text-diamond
-          | diamond
+          | LA CHASSE diamond
         span.text-silver.text-uppercase
-          | Solo
+          | L'UNE DES MEILLEURS CHASSE DE DÉCOUVERTE
         span.card-price.text-uppercase
           b
-            | $
-            big 99
+            |ICON 
           |  to win
       .card-bot.gradient
         ul.text-silver
-          li Dificulty : 
-            span.diamond-dificulty Hard
+          li type : 
+            span.diamond-dificulty Solo
           li Timeout : 
-            span.diamond-timeout 30min
+            span.diamond-timeout 17/04/2018-14:30
           li 
             | Current players : 
-            span.diamond-players ? 
+            span.diamond-players 0 
             | / 15
         a.btn.btn-diamond.text-uppercase.mb-lg(href='/game') Join
+
+  script(type='text/javascript').
+    var socket = io ();
+    $('.joinsilver').click( () => {
+    socket.emit('WTJ', $('#pseudo').text());
+    })
+    socket.on('Joined', () => {
+    console.log("Joined");
+    location.href="/game";
+    })
+    socket.on('Error', data =>{
+    console.log(data);
+    })

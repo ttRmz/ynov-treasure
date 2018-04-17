@@ -1,9 +1,9 @@
 {
-  "name": "treasure",
+  "name": "ynov-treasure",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "bcryptjs": "*",
@@ -28,6 +28,7 @@
     "passport-http": "*",
     "passport-local": "*",
     "pug": "2.0.0-beta11",
-    "serve-favicon": "~2.4.5"
+    "serve-favicon": "~2.4.5",
+    "socket.io": "^2.1.0"
   }
 }

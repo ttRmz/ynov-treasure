@@ -1,12 +1,20 @@
 extends layout
 
 block content
-
-    section.main-col.centered
-        h4.text-silver.mb-md Step n°#
-        hr.little-hr
-        p.mt-md.mb-md " Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis a nulla at libero quia iusto velit. Asperiores ex sint consequatur dolore, facilis illo error enim dolores autem laborum perferendis iusto! "
-        hr.little-hr        
-        .row-links.mt-md          
-            button.btn.btn-silver.mt-md(onclick="location.href='/';") Leave
-            button.btn.btn-diamond.mt-md(onclick="") SCAN !        
+    if finished
+        section.main-col.centered
+            h4.text-silver.mb-md The END :(
+            hr.little-hr
+            p.mt-md.mb-md Vous avez fini cette chasse, stay tuned !
+            hr.little-hr        
+            .row-links.mt-md          
+                button.btn.btn-silver.mt-md(onclick="location.href='/';") Leave
+    else
+        section.main-col.centered
+            h4.text-silver.mb-md Step n° #{chasse.step}
+            hr.little-hr
+            p.mt-md.mb-md " #{chasse.indice} "
+            hr.little-hr        
+            .row-links.mt-md          
+                button.btn.btn-silver.mt-md(onclick="location.href='/';") Leave
+                button.btn.btn-diamond.mt-md(onclick="location.href='/scan';") SCAN !        
