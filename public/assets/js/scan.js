@@ -57,7 +57,9 @@ function yes (){
     socket.emit('Success', tab);
 
     var audio = document.getElementById("audio");
+    $('body').addEventListener('touchstart', event => {
         audio.play();
+    })
 }
 
 function showText(text){
