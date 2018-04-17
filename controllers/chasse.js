@@ -49,7 +49,7 @@ module.exports = {
     },    
     findChasse: () => {
         return new Promise((resolve, reject) => {
-            chasseSchema.find({countplayer: {$lt : 15}}).limit(1).exec( (err, chasse) => {
+            chasseSchema.find({countplayer: {$lt : 20}}).limit(1).exec( (err, chasse) => {
                 if(err){
                     return reject(err);
                 }
