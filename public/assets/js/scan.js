@@ -103,7 +103,7 @@ function init(mn){
     $('#camera').append("<button id='return' class='btn btn-silver mt-md text-uppercase' style='position: absolute; bottom: 5px;'> return </button>")
     scene.add(camera);
     scene.visible = false;
-    showText($('#step').val() + " Cleared");
+    showText("Step " + $('#step').val() + " Cleared");
     arSource = new THREEx.ArToolkitSource({
         sourceType : 'webcam',
     });
