@@ -65,7 +65,7 @@ function yes (){
 function showText(text){
     var loader = new THREE.FontLoader();
 
-    loader.load( 'font/helvetiker_regular.typeface.json', function ( font ) {
+    loader.load( './assets/font/helvetiker_regular.typeface.json', function ( font ) {
 
         var material = new THREE.LineBasicMaterial( {
             color: "rgb(255, 128, 0)"

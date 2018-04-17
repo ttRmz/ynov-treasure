@@ -7,13 +7,13 @@ html
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
     title Ynov Treasure
     link(rel="icon" type="image/png" href="./assets/images/diamond.png")    
-    link(rel='stylesheet', href='/css/main.css')
+    link(rel='stylesheet', href='./assets/css/main.css')
     script(src='/socket.io/socket.io.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js')
     script(src='https://jeromeetienne.github.io/AR.js/three.js/build/ar.min.js')
     
   body.main-bg
-    audio#audio(src='assets/data/victory.ogg')
+    audio#audio(src='./assets/data/victory.ogg')
     input#marker(type='hidden', value!=marker)
     input#pseudo(type='hidden', value!=pseudo)
     input#cn(type='hidden', value!=cn)
@@ -22,4 +22,4 @@ html
 
 
     script(src='https://code.jquery.com/jquery-1.11.3.min.js')
-    script(src='js/scan.js')
+    script(src='./assets/js/scan.js')
