@@ -20,7 +20,7 @@ socket.on('TrueSucess', ()=> {
     clearInterval(interval);
     setTimeout(()=> { 
         location.href="/game";
-    }, 3500);
+    }, 2500);
 })
 
 window.addEventListener('touchstart', function() {
